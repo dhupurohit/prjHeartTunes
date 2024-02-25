@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <!-- Purple theme. -->
+    <style name="AppTheme.Purple" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">#00000000</item>
+    </style>
+
+    <style name="AppTheme.Purple.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!-- Dark Blue theme. -->
+    <style name="AppTheme.DarkBlue" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryDB</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDB</item>
+        <item name="colorAccent">@color/colorAccentDB</item>
+        <item name="android:statusBarColor">#00000000</item>
+    </style>
+
+    <style name="AppTheme.DarkBlue.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Brown theme. -->
+    <style name="AppTheme.Brown" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryB</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkB</item>
+        <item name="colorAccent">@color/colorAccentB</item>
+        <item name="android:statusBarColor">#00000000</item>
+    </style>
+
+    <style name="AppTheme.Brown.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!-- Green theme. -->
+    <style name="AppTheme.Green" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryG</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkG</item>
+        <item name="colorAccent">@color/colorAccentG</item>
+        <item name="android:statusBarColor">#00000000</item>
+    </style>
+
+    <style name="AppTheme.Green.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,62 @@
+//before onCreate
+
+    lateinit var drawerLayout: DrawerLayout
+    lateinit var navigationView: NavigationView
+    lateinit var toolbar: Toolbar
+
+
+//Inside onCreate
+
+        drawerLayout=findViewById(R.id.drawer_layout)
+        navigationView=findViewById(R.id.nav_view)
+        toolbar=findViewById(R.id.toolbar)
+
+        setSupportActionBar(toolbar)
+
+        navigationView.bringToFront()
+        val toggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close  )
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        navigationView.setNavigationItemSelectedListener(this)
+        navigationView.setCheckedItem(R.id.nav_home)
+
+
+// After onCreate
+
+ override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        when (menuItem.getItemId()) {
+            R.id.nav_home -> {
+            }
+            R.id.nav_themes -> {
+                val intent = Intent(this, Themes::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_drive -> {
+                val intent = Intent(this, DriveMode::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_timer -> {
+                val intent = Intent(this, Timer::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_share -> Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
+
+            R.id.nav_quit -> this.finishAffinity()
+        }
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
